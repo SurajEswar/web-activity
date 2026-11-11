@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NutriLife | Healthy Food & Nutrition</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background: #f5f8f2;
+    color: #26352a;
+}
+header {
+    background: #174c35;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo {
+    color: white;
+    font-size: 27px;
+}
+nav a {
+    color: white;
+    margin: 10px;
+    font-size: 15px;
+}
+nav a:hover {
+    color: #b9e6a5;
+}
+.hero {
+    min-height: 480px;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1490645935967-10de6ba17061")
+    center/cover;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+    color: white;
+}
+.hero-content {
+    max-width: 600px;
+}
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+.btn {
+    display: inline-block;
+    background: #80bd55;
+    color: white;
+    padding: 13px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #4e913c;
+}
+section {
+    padding: 65px 8%;
+}
+.section-title {
+    text-align: center;
+    color: #174c35;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #666;
+}
+.categories {
+    display: grid;
+}
+.category {
+    background: white;
+    padding: 30px 15px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #0001;
+}
+.category:hover {
+    background: #e7f4df;
+}
+.category h3 {
+    color: #174c35;
+    margin-bottom: 10px;
+}
+.recipe-container {
+    display: grid;
+}
+.recipe-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #0002;
+}
+.recipe-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+.recipe-content {
+    padding: 20px;
+}
+.recipe-content h3 {
+    color: #174c35;
+    margin-bottom: 10px;
+}
+.recipe-content p {
+    color: #666;
+    margin-bottom: 12px;
+}
+.calories {
+    color: #4d8b39;
+    font-weight: bold;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 12px #0001;
+}
+th, td {
+    padding: 16px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+th {
+    background: #174c35;
+    color: white;
+}
+tr:nth-child(even) {
+    background: #eaf3e6;
+}
+.tips-container {
+    display: grid;
+}
+.tip {
+    background: white;
+    padding: 25px;
+    border-left: 5px solid #78ae50;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px #0001;
+}
+.tip h3 {
+    color: #174c35;
+    margin-bottom: 12px;
+}
+.register {
+    background: #e6f1df;
+    text-align: center;
+}
+.register form {
+    max-width: 500px;
+    margin: auto;
+}
+.register input,
+.register select,
+.register textarea {
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+.register button {
+    background: #174c35;
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 5px;
+}
+.register button:hover {
+    background: #4d8b39;
+}
+footer {
+    background: #123a29;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+footer p {
+    margin: 8px;
+}
+@media(max-width:768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav {
+        text-align: center;
+    }
+    nav a {
+        display: inline-block;
+        margin: 7px;
+    }
+    .hero h1 {
+        font-size: 34px;
+    }
+    section {
+        padding: 45px 5%;
+    }
+    table {
+        font-size: 13px;
+    }
+    th, td {
+        padding: 10px;
+    }
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="logo">NutriLife</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#recipes">Recipes</a>
+        <a href="#mealplan">Meal Plan</a>
+        <a href="#tips">Health Tips</a>
+        <a href="#register">Register</a>
+    </nav>
+</header>
+<div class="hero" id="home">
+    <div class="hero-content">
+        <h1>Eat Healthy, Live Better</h1>
+        <p>
+            Discover nutritious recipes, balanced meal plans
+            and healthy eating habits. Enjoy delicious
+            vegetarian and non-vegetarian food.
+        </p>
+        <a href="#recipes" class="btn">Explore Recipes</a>
+    </div>
+</div>
+<section id="categories">
+    <h2 class="section-title">Food Categories</h2>
+    <p class="section-description">
+        Explore different types of nutritious food.
+    </p>
+    <div class="categories">
+        <div class="category">
+            <h3>Vegetarian</h3>
+            <p>Fresh vegetables and healthy plant foods.</p>
+        </div>
+        <div class="category">
+            <h3>Non-Vegetarian</h3>
+            <p>Chicken, fish, eggs and lean meat.</p>
+        </div>
+        <div class="category">
+            <h3>Fruits</h3>
+            <p>Natural vitamins and minerals.</p>
+        </div>
+        <div class="category">
+            <h3>Protein Foods</h3>
+            <p>Eggs, pulses, fish and dairy products.</p>
+        </div>
+    </div>
+</section>
+<section id="recipes">
+    <h2 class="section-title">Vegetarian Recipes</h2>
+    <p class="section-description">
+        Healthy and delicious vegetarian meals.
+    </p>
+    <div class="recipe-container">
+        <div class="recipe-card">
+            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999">
+            <div class="recipe-content">
+                <h3>Vegetable Salad</h3>
+                <p>Ingredients: Cucumber, tomato, carrot, lettuce and lemon.</p>
+                <p>Preparation: Chop vegetables and mix with lemon juice.</p>
+                <p class="calories">Calories: Approximately 150 kcal</p>
+            </div>
+        </div>
+        <div class="recipe-card">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd">
+            <div class="recipe-content">
+                <h3>Healthy Green Bowl</h3>
+                <p>Ingredients: Broccoli, spinach, beans and olive oil.</p>
+                <p>Preparation: Steam vegetables and serve in a bowl.</p>
+                <p class="calories">Calories: Approximately 220 kcal</p>
+            </div>
+        </div>
+        <div class="recipe-card">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554">
+            <div class="recipe-content">
+                <h3>Mixed Vegetable Soup</h3>
+                <p>Ingredients: Carrot, beans, tomato and pepper.</p>
+                <p>Preparation: Boil vegetables and add mild spices.</p>
+                <p class="calories">Calories: Approximately 120 kcal</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <h2 class="section-title">Non-Vegetarian Recipes</h2>
+    <p class="section-description">
+        Protein-rich meals for a balanced diet.
+    </p>
+    <div class="recipe-container">
+        <div class="recipe-card">
+            <img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435">
+            <div class="recipe-content">
+                <h3>Grilled Chicken</h3>
+                <p>Ingredients: Chicken breast, pepper, lemon and garlic.</p>
+                <p>Preparation: Marinate chicken and grill until fully cooked.</p>
+                <p class="calories">Calories: Approximately 280 kcal</p>
+            </div>
+        </div>
+        <div class="recipe-card">
+            <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2">
+            <div class="recipe-content">
+                <h3>Grilled Fish</h3>
+                <p>Ingredients: Fish, lemon, garlic, pepper and herbs.</p>
+                <p>Preparation: Season fish and grill until fully cooked.</p>
+                <p class="calories">Calories: Approximately 240 kcal</p>
+            </div>
+        </div>
+        <div class="recipe-card">
+            <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8">
+            <div class="recipe-content">
+                <h3>Boiled Eggs</h3>
+                <p>Ingredients: Eggs, water and a little salt.</p>
+                <p>Preparation: Boil eggs until fully cooked.</p>
+                <p class="calories">Calories: Approximately 155 kcal (2 eggs)</p>
+            </div>
+        </div>
+        <div class="recipe-card">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d">
+            <div class="recipe-content">
+                <h3>Chicken Curry</h3>
+                <p>Ingredients: Chicken, onion, tomato, ginger and spices.</p>
+                <p>Preparation: Cook chicken thoroughly with the curry ingredients.</p>
+                <p class="calories">Calories: Approximately 300 kcal</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="mealplan">
+    <h2 class="section-title">Daily Healthy Meal Plan</h2>
+    <p class="section-description">
+        Sample balanced meal plan with vegetarian and non-vegetarian choices.
+    </p>
+    <table>
+        <tr>
+            <th>Meal</th>
+            <th>Vegetarian Option</th>
+            <th>Non-Vegetarian Option</th>
+        </tr>
+        <tr>
+            <td>Breakfast</td>
+            <td>Oats, milk and fruits</td>
+            <td>Boiled eggs and whole wheat toast</td>
+        </tr>
+        <tr>
+            <td>Mid-Morning</td>
+            <td>Apple and almonds</td>
+            <td>Fruit and yogurt</td>
+        </tr>
+        <tr>
+            <td>Lunch</td>
+            <td>Rice, dal and vegetables</td>
+            <td>Rice, chicken curry and vegetables</td>
+        </tr>
+        <tr>
+            <td>Evening Snack</td>
+            <td>Roasted chickpeas</td>
+            <td>Boiled eggs</td>
+        </tr>
+        <tr>
+            <td>Dinner</td>
+            <td>Chapati and paneer</td>
+            <td>Chapati and grilled fish</td>
+        </tr>
+    </table>
+</section>
+<section id="tips">
+    <h2 class="section-title">Healthy Eating Tips</h2>
+    <p class="section-description">
+        Follow these simple habits for a healthier lifestyle.
+    </p>
+    <div class="tips-container">
+        <div class="tip">
+            <h3>Drink Enough Water</h3>
+            <p>Drink water regularly throughout the day.</p>
+        </div>
+        <div class="tip">
+            <h3>Eat Fruits</h3>
+            <p>Include fresh fruits in your daily diet.</p>
+        </div>
+        <div class="tip">
+            <h3>Eat Protein</h3>
+            <p>Include eggs, fish, chicken, pulses and dairy products.</p>
+        </div>
+        <div class="tip">
+            <h3>Avoid Junk Food</h3>
+            <p>Limit highly processed foods and sugary drinks.</p>
+        </div>
+        <div class="tip">
+            <h3>Balanced Diet</h3>
+            <p>Eat vegetables, fruits, protein and whole grains.</p>
+        </div>
+        <div class="tip">
+            <h3>Exercise Regularly</h3>
+            <p>Stay physically active and get enough sleep.</p>
+        </div>
+    </div>
+</section>
+<section class="register" id="register">
+    <h2 class="section-title">Join NutriLife</h2>
+    <p class="section-description">
+        Register to start your healthy eating journey.
+    </p>
+    <form>
+        <input type="text" placeholder="Enter Your Name" required>
+        <input type="email" placeholder="Enter Your Email" required>
+        <input type="number" placeholder="Enter Your Age">
+        <select required>
+            <option value="">Select Your Food Preference</option>
+            <option>Vegetarian</option>
+            <option>Non-Vegetarian</option>
+            <option>Both</option>
+        </select>
+        <textarea rows="4" placeholder="Your Health Goals"></textarea>
+        <button type="submit">Register Now</button>
+    </form>
+</section>
+<footer>
+    <h2>NutriLife</h2>
+    <p>Healthy Food | Healthy Body | Healthy Life</p>
+    <p>Copyright 2026 NutriLife. All Rights Reserved.</p>
+</footer>
+</body>
+</html>

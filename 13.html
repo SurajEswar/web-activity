@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IRON ZONE | Fitness Center</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+}
+header {
+    background: #080808;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo {
+    color: #ff4d24;
+    font-size: 27px;
+    font-weight: bold;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+nav a:hover {
+    color: #ff4d24;
+}
+section {
+    padding: 65px 7%;
+}
+h2 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 35px;
+    color: #ff4d24;
+}
+.hero {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(120deg, #222, #090909);
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsJCNpZO6JR9mSi3V7JmwufKCUKDju7P18AJYTPHSKUg&s=10");
+}
+.hero span {
+    color: #ff4d24;
+}
+.hero p {
+    margin: 15px;
+    font-size: 18px;
+}
+.btn {
+    display: inline-block;
+    background: #ff4d24;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+.btn:hover {
+    background: white;
+    color: #ff4d24;
+}
+.about {
+    background: #1b1b1b;
+    text-align: center;
+}
+.about p {
+    margin: auto;
+}
+.workout-container,
+.card-container,
+.facility-container,
+.trainer-container {
+    display: grid;
+}
+.workout-card,
+.card,
+.facility,
+.trainer {
+    background: #222;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #383838;
+}
+.workout-card:hover,
+.card:hover,
+.facility:hover,
+.trainer:hover {
+    transform: translateY(-8px);
+    border-color: #ff4d24;
+}
+.workout-card h3,
+.card h3,
+.facility h3,
+.trainer h3 {
+    color: #ff4d24;
+    margin-bottom: 12px;
+}
+.workout-card h4 {
+    margin-top: 12px;
+    color: #ffb49e;
+}
+ul {
+    padding-left: 20px;
+}
+li {
+    margin: 5px 0;
+}
+.trainer, .facility {
+    text-align: center;
+}
+.membership {
+    background: #1b1b1b;
+}
+.card {
+    text-align: center;
+}
+.price {
+    color: #ff4d24;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+.card p {
+    margin: 8px 0;
+}
+.discount {
+    color: #9be59b;
+    font-weight: bold;
+}
+.card a {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 22px;
+    background: #ff4d24;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.card a:hover {
+    background: white;
+   color: #ff4d24;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #222;
+}
+th, td {
+    padding: 15px;
+    border: 1px solid #444;
+    text-align: center;
+}
+th {
+    background: #ff4d24;
+}
+.register {
+    background: #1b1b1b;
+}
+form {
+    max-width: 550px;
+    margin: auto;
+    background: #222;
+    padding: 30px;
+    border-radius: 10px;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #111;
+    color: white;
+    font-size: 15px;
+}
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid #ff4d24;
+}
+button {
+    width: 100%;
+    padding: 13px;
+    background: #ff4d24;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+}
+button:hover {
+    background: white;
+    color: #ff4d24;
+}
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #080808;
+    color: #aaa;
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="logo">IRON ZONE</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#workouts">Workouts</a>
+        <a href="#trainers">Trainers</a>
+        <a href="#membership">Membership</a>
+        <a href="#register">Join Us</a>
+    </nav>
+</header>
+<!-- HOME -->
+<section class="hero home" id="home">
+    <h1>BUILD YOUR <span>BODY</span></h1>
+    <p>Train Hard. Stay Strong. Become Better.</p>
+    <p>Welcome to IRON ZONE Fitness Center</p>
+    <a href="#membership" class="btn">Explore Membership</a>
+</section>
+<section class="about" id="about">
+    <h2>About Our Gym</h2>
+    <p>
+        IRON ZONE is a modern fitness center designed to the 
+        people achieve their fitness goals. We provide workout
+        programs, professional trainers, cardio facilities and
+        affordable membership plans. Our goal is to build a
+        healthier and stronger community.
+    </p>
+</section>
+<section id="workouts">
+<h2>Double Workout Programs</h2>
+<div class="workout-container">
+<div class="workout-card">
+<h3>Monday - Chest + Triceps</h3>
+<h4>Chest</h4>
+<ul>
+<li>Flat Bench Press - 3 X 10</li>
+<li>Incline Dumbbell Press - 2 X 12</li>
+<li>Cable Chest Fly - 2 X 12</li>
+<li>Push-ups - 2 X 10</li>
+</ul>
+<h4>Triceps</h4>
+<ul>
+<li>Rope Pushdown - 2 X 12</li>
+<li>Overhead Dumbbell Extension - 2 X 12</li>
+<li>Close-Grip Bench Press - 2 X 10</li>
+<li>Triceps Kickbacks - 2 X 12</li>
+</ul>
+</div>
+<div class="workout-card">
+<h3>Tuesday - Back + Biceps</h3>
+<h4>Back / Lats</h4>
+<ul>
+<li>Lat Pulldown - 3 X 12</li>
+<li>Seated Cable Row - 3 X 12</li>
+<li>One-Arm Dumbbell Row - 2 X 12</li>
+<li>Back Extension - 2 X 12</li>
+</ul>
+<h4>Biceps</h4>
+<ul>
+<li>Dumbbell Curl - 3 X 12</li>
+<li>Hammer Curl - 2 X 12</li>
+<li>Preacher Curl - 2 X 12</li>
+<li>Concentration Curl - 2 X 12</li>
+</ul>
+</div>
+<div class="workout-card">
+<h3>Wednesday - Shoulders + Legs</h3>
+<h4>Shoulders</h4>
+<ul>
+<li>Shoulder Press - 3 X 10</li>
+<li>Lateral Raises - 2 X 12</li>
+<li>Front Raises - 2 X 12</li>
+<li>Reverse Fly - 2 X 12</li>
+</ul>
+<h4>Legs</h4>
+<ul>
+<li>Squats - 3 X 10</li>
+<li>Leg Press - 3 X 12</li>
+<li>Leg Curls - 2 X 12</li>
+<li>Calf Raises - 2 X 15</li>
+</ul>
+</div>
+<div class="workout-card">
+<h3>Thursday - Chest + Triceps</h3>
+<h4>Chest</h4>
+<ul>
+<li>Incline Bench Press - 3 X 10</li>
+<li>Dumbbell Chest Press - 2 X 12</li>
+<li>Cable Chest Fly - 2 X 12</li>
+<li>Push-ups - 2 X 10</li>
+</ul>
+<h4>Triceps</h4>
+<ul>
+<li>Rope Pushdown - 2 X 12</li>
+<li>Overhead Extension - 2 X 12</li>
+<li>Triceps Dips - 2 X 10</li>
+<li>Triceps Kickbacks - 2 X 12</li>
+</ul>
+</div>
+<div class="workout-card">
+<h3>Friday - Back + Biceps</h3>
+<h4>Back / Lats</h4>
+<ul>
+<li>Wide-Grip Lat Pulldown - 3 X 12</li>
+<li>Barbell Row - 3 X 10</li>
+<li>Close-Grip Cable Row - 2 X 12</li>
+<li>Back Extension - 2 X 12</li>
+</ul>
+<h4>Biceps</h4>
+<ul>
+<li>Barbell Curl - 3 X 10</li>
+<li>Hammer Curl - 2 X 12</li>
+<li>Preacher Curl - 2 X 12</li>
+<li>Concentration Curl - 2 X 12</li>
+</ul>
+</div>
+<div class="workout-card">
+<h3>Saturday - Full Body</h3>
+<h4>Full Body Exercises</h4>
+<ul>
+<li>Goblet Squats - 2 X 12</li>
+<li>Push-ups - 2 X 10</li>
+<li>Lat Pulldown - 2 X 12</li>
+<li>Dumbbell Shoulder Press - 2 X 12</li>
+<li>Dumbbell Biceps Curl - 2 X 12</li>
+<li>Triceps Pushdown - 2 X 12</li>
+<li>Plank - 2 sets</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="trainers">
+<h2>Our Professional Trainers</h2>
+<div class="trainer-container">
+<div class="trainer">
+<h3>Strength Trainer</h3>
+<p>Guidance for muscle building and strength training.</p>
+</div>
+<div class="trainer">
+<h3>Personal Trainer</h3>
+<p>Individual workout plans and personal fitness guidance.</p>
+</div>
+<div class="trainer">
+<h3>Cardio Trainer</h3>
+<p>Guidance for stamina, endurance and cardio workouts.</p>
+</div>
+</div>
+</section>
+<section>
+<h2>Our Fitness Facilities</h2>
+<div class="facility-container">
+<div class="facility">
+<h3>Weight Training</h3>
+<p>Modern gym equipment for strength and muscle training.</p>
+</div>
+<div class="facility">
+<h3>Cardio Zone</h3>
+<p>Treadmills, cycling machines and fitness equipment.</p>
+</div>
+<div class="facility">
+<h3>Personal Training</h3>
+<p>Professional guidance based on your fitness goals.</p>
+</div>
+<div class="facility">
+<h3>Changing Rooms</h3>
+<p>Clean and comfortable changing facilities.</p>
+</div>
+</div>
+</section>
+<section class="membership" id="membership">
+<h2>Membership Plans</h2>
+<div class="card-container">
+<div class="card">
+<h3>Normal</h3>
+<div class="price">₹900</div>
+<p>1 Month Membership</p>
+<p>Gym Access</p>
+<p>Weight Training</p>
+<hr>
+<p class="discount">3 Months: ₹2,430</p>
+<p class="discount">1 Year: ₹8,640</p>
+<a href="#register">Join Now</a>
+</div>
+<div class="card">
+<h3>Normal + Cardio</h3>
+<div class="price">₹1,300</div>
+<p>1 Month Membership</p>
+<p>Gym Access</p>
+<p>Cardio Facilities</p>
+<hr>
+<p class="discount">3 Months: ₹3,510</p>
+<p class="discount">1 Year: ₹12,480</p>
+<a href="#register">Join Now</a>
+</div>
+<div class="card">
+<h3>Personal Trainer + Cardio</h3>
+<div class="price">₹1,700</div>
+<p>1 Month Membership</p>
+<p>Personal Trainer</p>
+<p>Cardio Facilities</p>
+<p>Individual Workout Guidance</p>
+<hr>
+<p class="discount">3 Months: ₹4,590</p>
+<p class="discount">1 Year: ₹16,320</p>
+<a href="#register">Join Now</a>
+</div>
+</div>
+<p style="text-align:center; margin-top:30px;">
+<strong>Special Discounts:</strong><br>
+3 Months - 10% OFF / 1 Year - 20% OFF
+</p>
+</section>
+<section id="schedule">
+<h2>Gym Schedule</h2>
+<table>
+<tr>
+<th>Day</th>
+<th>Morning</th>
+<th>Evening</th>
+</tr>
+<tr>
+<td>Monday - Saturday</td>
+<td>5:00 AM - 10:30 AM</td>
+<td>5:00 PM - 9:00 PM</td>
+</tr>
+<tr>
+<td>Sunday</td>
+<td colspan="2">Morning only and evening closed</td>
+</tr>
+</table>
+</section>
+<section class="register" id="register">
+<h2>Member Registration</h2>
+<form action="#" method="post">
+<input type="text" name="name"
+placeholder="Enter Your Full Name" required>
+<input type="number" name="age"
+placeholder="Enter Your Age" required>
+<input type="tel" name="phone"
+placeholder="Enter Phone Number" required>
+<input type="email" name="email"
+placeholder="Enter Your Email" required>
+<select name="membership" required>
+<option value="">Select Membership Plan</option>
+<option>Normal - ₹900 / Month</option>
+<option>Normal + Cardio - ₹1300 / Month</option>
+<option>Personal Trainer + Cardio - ₹1700 / Month</option>
+</select>
+<select name="duration" required>
+<option value="">Select Membership Duration</option>
+<option>1 Month</option>
+<option>3 Months - 10% Discount</option>
+<option>1 Year - 20% Discount</option>
+</select>
+<textarea name="message"
+placeholder="Your Fitness Goals" rows="4"></textarea>
+<button type="submit">Register Now</button>
+</form>
+</section>
+<footer>
+<h3>IRON ZONE FITNESS CENTER</h3>
+<p>Train Hard | Eat Healthy | Stay Strong</p>
+<p>Open your feathers with us!!!</p>
+<p>Build your era your own with our expert trainers!</p>
+</footer>
+</body>
+</html>
